@@ -9,15 +9,15 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 /* static const char dmenufont[]       = "monospace:size=10"; */
 static const char *fonts[]          = { "Dina:pixelsize=11" };
 static const char dmenufont[]       = "Dina:pixelsize=11";
-static const char col_gray1[]       = "#e0e0e0"; /* top bar backround color */
+static const char col_gray1[]       = "#000000"; /* top bar backround color */
 static const char col_gray2[]       = "#000000"; /* background color */
-static const char col_gray3[]       = "#444444"; /* background text */
+static const char col_gray3[]       = "#ffffff"; /* background text */
 static const char col_gray4[]       = "#222222"; /* active text */
-static const char col_cyan[]        = "#f2f2f2"; /* top bar foreground | selected tile */
+static const char col_cyan[]        = "#72dec2"; /* top bar foreground | selected tile */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_cyan, col_gray1,  col_cyan  },
 };
 
 /* tagging */
