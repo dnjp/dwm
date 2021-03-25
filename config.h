@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 #include <X11/XF86keysym.h>
 
 /* appearance */
@@ -9,11 +8,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Meslo LG S:size=10" };
 static const char dmenufont[]       = "Meslo LG S:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#2e3131";
+static const char col_gray1[]       = "#222222"; /* top bar backround color */
+static const char col_gray2[]       = "#444444"; /* background color */
+static const char col_gray3[]       = "#bbbbbb"; /* background text */
+static const char col_gray4[]       = "#eeeeee"; /* active text */
+static const char col_cyan[]        = "#2e3131"; /* top bar foreground | selected tile */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -46,7 +45,6 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-/* #define MODKEY Mod1Mask */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
